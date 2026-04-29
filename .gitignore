@@ -1,0 +1,20 @@
+# Secrets — never commit these
+.env
+.env.*
+
+# Deployment notes with sensitive contract/wallet info
+deployment on mainnet
+future_deployment.txt
+supabase_data.txt
+
+# Dependencies — Render installs these automatically
+node_modules/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
