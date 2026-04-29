@@ -12,7 +12,7 @@
 
 import { StarkZap, StarkSigner, Amount, fromAddress } from 'starkzap';
 
-// ── SDK instances (one per network) ──────────────────────────────────────────
+//  SDK instances (one per network) 
 let _sdkMainnet = null;
 let _sdkSepolia = null;
 
@@ -34,7 +34,7 @@ function getSdk(network) {
   }
 }
 
-// ── Treasury wallet (read-only, used for balance checks) ──────────────────────
+//  Treasury wallet (read-only, used for balance checks) 
 let _treasuryWallet = null;
 
 async function getTreasuryWallet() {
@@ -59,7 +59,7 @@ async function getTreasuryWallet() {
   }
 }
 
-// ── Token metadata resolution ─────────────────────────────────────────────────
+//  Token metadata resolution 
 /**
  * Resolve on-chain ERC20 metadata (name, symbol, decimals) for a given
  * contract address using StarkZap's built-in token helpers.
@@ -90,7 +90,7 @@ export async function resolveTokenMetadata(address, network) {
   }
 }
 
-// ── Amount formatting helpers ─────────────────────────────────────────────────
+//  Amount formatting helpers 
 /**
  * Parse a human-readable amount string ("1.5") into a raw BigInt
  * using StarkZap's Amount.parse — respects token decimals correctly.
@@ -132,7 +132,7 @@ export function formatTokenAmount(rawAmount, decimals = 18, symbol = '') {
   }
 }
 
-// ── Treasury STRK balance ─────────────────────────────────────────────────────
+//  Treasury STRK balance 
 /**
  * Fetch the STRK balance of the treasury wallet using StarkZap's
  * wallet.balanceOf() — returns a formatted string or null if unavailable.
@@ -156,7 +156,7 @@ export async function getTreasuryStrkBalance() {
   }
 }
 
-// ── Verification fee computation ──────────────────────────────────────────────
+//  Verification fee computation 
 /**
  * Compute how many STRK tokens equal $0.75 USD given a live price.
  * Uses StarkZap's Amount to produce a precise, decimal-safe result.
