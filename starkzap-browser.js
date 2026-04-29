@@ -12,7 +12,7 @@
  *   - mainnetTokens / sepoliaTokens → canonical token metadata without manual JSON
  */
 
-// ── StarkZap ESM import (loaded via importmap or bundler) ────────────────────
+//  StarkZap ESM import (loaded via importmap or bundler) 
 // In production (bundled): imported by the build tool.
 // For CDN / vanilla HTML: add to index.html before this script:
 //   <script type="importmap">
@@ -28,7 +28,7 @@ import {
   sepoliaTokens,
 } from 'starkzap';
 
-// ── Amount helpers ────────────────────────────────────────────────────────────
+//  Amount helpers 
 
 /**
  * Format a raw on-chain amount to a readable string.
@@ -85,7 +85,7 @@ export function compareAmounts(a, b) {
   return 'eq';
 }
 
-// ── Address helpers ───────────────────────────────────────────────────────────
+//  Address helpers 
 
 /**
  * Validate and normalise a Starknet address using StarkZap's fromAddress.
@@ -108,7 +108,7 @@ export function normaliseAddress(raw) {
   }
 }
 
-// ── Token preset lookup ───────────────────────────────────────────────────────
+//  Token preset lookup 
 
 /**
  * Look up a token from StarkZap's canonical preset list.
@@ -144,7 +144,7 @@ export function getPresetTokenAddress(symbol, network = 'mainnet') {
   return token ? token.address.toString() : null;
 }
 
-// ── Verification fee display ──────────────────────────────────────────────────
+//  Verification fee display 
 
 /**
  * Compute the STRK verification fee given a USD price.
@@ -163,7 +163,7 @@ export function computeFeeStrk(strkUsdPrice) {
   }
 }
 
-// ── Expose on window for app.js (vanilla JS compat) ─────────────────────────
+//  Expose on window for app.js (vanilla JS compat) 
 window.StarkZapHelpers = {
   formatAmount,
   parseAmount,
