@@ -181,7 +181,6 @@ Base URL: `https://tokenhive.onrender.com/api/v1`
 | GET | `/resolve/:address` | Resolve address → token metadata |
 | GET | `/stats` | Registry statistics |
 | GET | `/health` | Health check |
-| GET | `/ping` | Uptime ping — returns `pong` |
 
 ---
 
