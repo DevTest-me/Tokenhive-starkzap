@@ -11,7 +11,6 @@ Token Hive lets anyone register, discover, and verify ERC-20 tokens on Starknet 
 - **Token Registry** — Browse, search and filter all registered Starknet tokens
 - **One-click Deploy** — Deploy a new ERC-20 to mainnet or testnet via your connected Argent X or Braavos wallet
 - **Verification System** — Token owners can request official verification with email notification via Resend
-- **Admin Panel** — Private route for reviewing and approving/rejecting verification requests
 - **API** — Public REST API at `/api/v1/*` for wallets and apps to consume token metadata
 - **StarkZap Integration** — Server-side token resolution, amount formatting, and treasury balance powered by the StarkZap SDK
 
@@ -176,7 +175,7 @@ Open `http://localhost:3001` in your browser.
 
 ## 🌐 API Reference
 
-Base URL: `https://your-deploy.onrender.com/api/v1`
+Base URL: `https://tokenhive.onrender.com/api/v1`
 
 | Method | Endpoint | Description |
 |---|---|---|
