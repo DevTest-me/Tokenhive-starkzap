@@ -132,12 +132,6 @@ TokenHive/
 
 ### 1. Clone & install
 
-```bash
-git clone https://github.com/your-username/tokenhive.git
-cd tokenhive
-npm install
-```
-
 ### 2. Environment variables
 
 Create a `.env` file (never commit this):
@@ -200,16 +194,6 @@ Base URL: `https://tokenhive.onrender.com/api/v1`
    - **Build command:** `npm install`
    - **Start command:** `node api/server.js`
 5. Add all `.env` values under **Environment** in the Render dashboard
-6. Set up an uptime monitor (e.g. UptimeRobot) pointing to `/ping` every 10 minutes to prevent free-tier spin-down
-
----
-
-## 🔐 Security Notes
-
-- The admin panel lives at `/hive_for_admin` — this route is not linked anywhere in the public UI
-- Admin sessions use short-lived JWT cookies (8h expiry, `httpOnly`, `sameSite: strict`)
-- Token edits require wallet ownership proof — the `registered_by` address must match the request's `wallet_address`
-- Never commit `.env` — all secrets go into Render's environment dashboard
 
 ---
 
